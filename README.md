@@ -54,7 +54,7 @@ Proyek ini akan mencakup tahapan-tahapan berikut:
 
 ### Persiapan
 
-Sumber data: [Dataset Karyawan Jaya Jaya Maju](https://github.com/dicodingacademy/dicoding_dataset/tree/main/employee)
+Sumber data: [Dataset Mahasiswa Jaya Jaya Institut](https://github.com/dicodingacademy/dicoding_dataset/blob/main/students_performance/README.md)
 
 Setup environment:
 
@@ -67,29 +67,24 @@ Setup environment:
 
   * **Jalankan Notebook:** Gunakan `jupyter notebook`, `jupyter lab` (lokal) atau unggah ke Google Colab dan jalankan semua sel.
 
-**2. Run `prediction.py`:**
+**2. Run Streamlit App (`app.py`):**
 
-  * **Verifikasi dir. model:** Pastikan path model dan encoder di `prediction.py` sudah benar (Ubah jika perlu).
-    ```
-    model = joblib.load("model/model.pkl")
-    encoder = joblib.load("model/encoder.pkl")
-    ```
-  
-  * **Instal Dependensi (jika library belum terinstall):** 
-    ```
-    pip install pandas joblib scikit-learn
-    ```
-  
-  * **Jalankan Skrip:** Pada terminal proyek, jalankan 
-    ```
-    python predict.py
-    ```
-    Hasil prediksi akan tampil sebagai output.
+   * **Model :**  file model (`model.pkl`) dan encoder (`encoder.pkl`) berada di dalam folder `model/` pada direktori proyek Anda.
+   * **Instal Streamlit (jika belum):**
+     ```bash
+     pip install streamlit
+     ```
+   * **Jalankan Aplikasi:** Di terminal proyek, jalankan:
+     ```bash
+     streamlit run app.py
+     ```
+
+     Aplikasi Streamlit akan terbuka di *browser* Anda.
 
 **3. Jalankan Dashboard (Metabase w/ Docker):**
 
   * **Instal Docker Desktop:** Unduh dan instal dari [www.docker.com/products/docker-desktop/](https://www.docker.com/products/docker-desktop/).
-  * **Pindahkan Database:** Taruh `metabase.db.mv.db` pada direektori kerja.
+  * **Pindahkan Database:** Taruh `metabase.db.mv.db` pada direktori kerja.
   * **Tarik Image:** Pada terminal, jalankan 
     ```
     docker pull metabase/metabase:latest
