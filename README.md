@@ -185,14 +185,52 @@ Sistem akan segera memproses data yang dimasukkan menggunakan model *machine lea
 
 ## Conclusion
 
+Proyek ini berhasil mengembangkan sistem deteksi dini risiko *dropout* mahasiswa di Jaya Jaya Institut, sebagai bagian dari upaya strategis menekan angka putus studi. Dengan memanfaatkan data historis mahasiswa, kami membangun model *machine learning* prediktif berbasis **Random Forest**, yang terintegrasi dengan *business dashboard* interaktif untuk menyajikan wawasan mendalam bagi pengambil keputusan. Model dievaluasi menggunakan data uji (`X_test_scaled`, `y_test`) dan menghasilkan performa yang sangat baik dan seimbang antara kedua kelas, yaitu mahasiswa yang *dropout* dan yang tidak.
 
+**Hasil Evaluasi:**
+- **Accuracy**: 0.9434 (sekitar 94.34% data uji berhasil diprediksi dengan benar)
+- **ROC AUC Score**: 0.9786 — menunjukkan kemampuan model dalam membedakan mahasiswa yang berisiko *dropout* dan yang tidak tergolong sangat tinggi.
 
-### Rekomendasi Action Items (Optional)
+**Classification Report:**
 
-Berdasarkan hasil temuan, berikut beberapa langkah *strategis* yang disarankan untuk Jaya Jaya Maju:
+| Kelas | Keterangan              | Precision | Recall | F1-Score | Support |
+|-------|--------------------------|-----------|--------|----------|---------|
+| 0     | Dropout                  | 0.92      | 0.97   | 0.94     | 601     |
+| 1     | Enrolled & Graduate      | 0.97      | 0.92   | 0.94     | 601     |
 
-* **Evaluasi Skema Gaji:** Karena kompensasi menjadi faktor utama attrition, penting untuk mengevaluasi ulang struktur gaji dan memastikan daya saing di pasar tenaga kerja, terutama untuk posisi yang rawan *turnover*.
-* **Program Engagement Karyawan Berdasarkan Usia dan Masa Kerja:** Mengembangkan program engagement yang ditargetkan untuk kelompok usia dan masa kerja tertentu yang menunjukkan tingkat *attrition* lebih tinggi. Misalnya, program pengembangan karir untuk karyawan muda atau program apresiasi untuk karyawan dengan masa kerja lebih pendek.
-* **Atur Kebijakan Lembur Secara Bijak:** Perusahaan perlu memastikan beban kerja tidak berlebihan. Jika lembur tidak bisa dihindari, sediakan kompensasi atau fleksibilitas kerja sebagai bentuk apresiasi.
-* **Analisis Faktor Tambahan:** Faktor seperti **StockOptionLevel**, **JobSatisfaction**, dan **YearsInCurrentRole** juga berpengaruh dan perlu dianalisis lebih lanjut untuk memahami konteks spesifik yang memicu *attrition*.
-* **Lakukan Pendekatan pada Karyawan Berisiko Tinggi:** Gunakan hasil prediksi model untuk melakukan intervensi personal, seperti diskusi one-on-one atau penawaran insentif agar mereka merasa dihargai dan tetap bertahan.
+- **Macro Average F1-Score**: 0.94  
+- **Weighted Average F1-Score**: 0.94
+
+Hasil ini menunjukkan bahwa model mampu mengklasifikasikan kedua kelas secara seimbang, dengan nilai *precision* dan *recall* yang konsisten tinggi.
+
+Berdasarkan analisis *feature importance*, model mengidentifikasi bahwa:
+- **Faktor akademik** (khususnya jumlah unit yang disetujui dan nilai pada semester 1 dan 2) merupakan prediktor paling berpengaruh terhadap potensi *dropout* mahasiswa.
+- Temuan ini konsisten dengan pola pada dashboard, yang menunjukkan mahasiswa dengan nilai dan unit rendah memiliki risiko *dropout* lebih tinggi.
+- Faktor non-akademik seperti `Age_at_enrollment`, `Tuition_fees_up_to_date`, `Scholarship_holder`, dan `Debtor` juga berkontribusi dalam prediksi, namun dampaknya relatif lebih kecil dibandingkan faktor akademik.
+
+### Rekomendasi Action Items
+
+Berdasarkan hasil evaluasi model dan temuan dalam proyek, berikut sejumlah langkah strategis yang dapat diterapkan oleh Jaya Jaya Institut untuk menurunkan tingkat *dropout* mahasiswa:
+
+* **Optimalisasi Sistem Prediksi:**
+    * Terapkan prototipe berbasis Streamlit ke dalam sistem akademik guna memantau risiko *dropout* mahasiswa secara *real-time*.
+    * Manfaatkan *business dashboard* secara berkala untuk mengevaluasi pola *dropout*, menilai efektivitas intervensi, dan menyusun strategi berbasis data.
+
+* **Penguatan Dukungan Finansial dan Konseling:**
+    * Evaluasi dan perluas cakupan program bantuan biaya pendidikan bagi mahasiswa yang bukan `Scholarship_holder`, memiliki tunggakan `Tuition_fees_up_to_date`, atau berstatus `Debtor`.
+    * Tawarkan layanan konseling keuangan untuk membantu mahasiswa menyusun rencana pembayaran dan menyelesaikan masalah keuangan.
+
+* **Intervensi Dini terhadap Risiko Akademik:**
+    * Identifikasi mahasiswa dengan nilai dan jumlah unit rendah di semester awal (`Curricular_units_1st_sem_grade`, `Curricular_units_1st_sem_approved`, `Curricular_units_2nd_sem_grade`, `Curricular_units_2nd_sem_approved`) sebagai target utama intervensi.
+    * Sediakan dukungan berupa bimbingan akademik, program belajar tambahan, atau *peer tutoring* bagi mahasiswa dengan performa awal yang lemah.
+    * Lakukan pemantauan berkala melalui dashboard untuk memastikan mahasiswa berisiko menerima dukungan tepat waktu.
+
+* **Program Adaptasi Mahasiswa Baru:**
+    * Kembangkan program orientasi dan adaptasi yang lebih menyeluruh untuk mahasiswa dengan `Age_at_enrollment` yang rendah, guna membantu mereka bertransisi ke lingkungan perkuliahan.
+    * Tawarkan pendampingan ekstra bagi mahasiswa yang mendaftar melalui `Application_mode` tertentu yang menunjukkan tingkat *dropout* lebih tinggi, seperti `2nd Phase - General Contingent`.
+
+* **Evaluasi Program Studi dan Pengajaran:**
+    * Lakukan kajian terhadap mata kuliah dan `Course` yang mencatat angka *dropout* tinggi untuk mengidentifikasi perbaikan yang mungkin dibutuhkan dalam kurikulum atau metode pengajaran.
+    * Pastikan kualitas pembelajaran terjaga untuk mempertahankan motivasi dan hasil belajar mahasiswa.
+
+Dengan menjalankan rekomendasi-rekomendasi ini, diharapkan Jaya Jaya Institut dapat menciptakan lingkungan akademik yang lebih suportif dan mendorong keberhasilan studi mahasiswa secara lebih merata.
