@@ -1,10 +1,9 @@
-# Proyek Akhir: Menyelesaikan Permasalahan Human Resources
+# Proyek Akhir: Menyelesaikan Permasalahan Institusi Pendidikan
 
 ## Business Understanding
 
-PT Jaya Jaya Maju adalah perusahaan berskala internasional yang telah beroperasi lebih dari dua dekade (sejak tahun 2000) dengan tenaga kerja lebih dari 1.000 orang yang tersebar di berbagai lokasi. Meskipun perusahaan telah mencapai pertumbuhan yang menggembirakan dengan cakupan operasi yang luas, saat ini mereka menghadapi masalah serius dalam manajemen SDM, terutama terkait tingkat pengunduran diri karyawan (attrition rate) yang cukup tinggi, yaitu melebihi 10%.
-
-Tingginya angka pengunduran diri ini menimbulkan beberapa konsekuensi negatif, antara lain gangguan pada operasional perusahaan, penurunan produktivitas, serta pembengkakan biaya untuk merekrut dan melatih karyawan pengganti. Untuk mengatasi masalah ini dan mendukung strategi retensi serta pertumbuhan berkelanjutan, PT Jaya Jaya Maju perlu melakukan analisis komprehensif untuk mengidentifikasi faktor-faktor utama yang menyebabkan karyawan memilih meninggalkan perusahaan.
+Jaya Jaya Institut telah berdiri sejak tahun 2000, dikenal sebagai lembaga pendidikan dengan lulusan yang berkualitas. 
+Namun, belakangan ini institusi menghadapi permasalahan serius terkait meningkatnya angka **dropout** mahasiswa. Tingginya jumlah mahasiswa yang tidak menyelesaikan studi berdampak negatif terhadap citra institusi serta mengganggu efektivitas operasionalnya.
 
 ### Permasalahan Bisnis
 
