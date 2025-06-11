@@ -142,6 +142,47 @@ Dashboard ini dibuat menggunakan Metabase dan berperan sebagai media visualisasi
 ### Insight Dashboard:
 Dashboard ini secara komprehensif mengungkap bahwa **faktor akademik** memiliki pengaruh dominan terhadap potensi mahasiswa mengalami *dropout* di Jaya Jaya Institut. Secara spesifik, jumlah unit kurikuler yang disetujui dan nilai akademik pada semester pertama dan kedua muncul sebagai indikator paling signifikan. Hal ini mencerminkan bahwa performa awal mahasiswa di masa-masa awal perkuliahan sangat menentukan keberlanjutan studi mereka. Mahasiswa dengan pencapaian rendah di semester awal cenderung memiliki risiko lebih tinggi untuk tidak menyelesaikan pendidikannya. Selain performa akademik, `Age_at_enrollment` juga menjadi faktor penting. Data menunjukkan bahwa mahasiswa yang berusia lebih muda saat masuk perguruan tinggi memiliki kemungkinan lebih besar untuk *dropout*. Hal ini dapat disebabkan oleh kurangnya kematangan emosional, kesulitan beradaptasi dengan lingkungan perguruan tinggi, atau beban akademik yang tidak sesuai dengan ekspektasi. Faktor-faktor non-akademik seperti status keuangan mahasiswa — apakah mereka menerima beasiswa (`Scholarship_holder`) atau memiliki tanggungan hutang (`Debtor`) — serta keteraturan dalam pembayaran biaya kuliah (`Tuition_fees_up_to_date`) turut memberikan kontribusi terhadap risiko *dropout*. Meskipun demikian, dampak dari faktor-faktor ini cenderung lebih kecil jika dibandingkan dengan pengaruh performa akademik. Artinya, masalah akademik lebih sering menjadi alasan utama dibandingkan tekanan finansial. Distribusi *dropout* berdasarkan gender menunjukkan perbedaan yang tidak signifikan, menandakan bahwa risiko ini terjadi secara relatif merata antara mahasiswa laki-laki dan perempuan. Upaya seperti pemantauan rutin terhadap nilai dan penyelesaian unit, pemberian bimbingan akademik secara berkala, serta program pendampingan bagi mahasiswa baru dapat menjadi solusi preventif yang efektif. Di samping itu, perhatian terhadap kondisi keuangan mahasiswa — seperti pemberian bantuan atau keringanan biaya — tetap menjadi aspek penting untuk mengurangi hambatan dalam menyelesaikan studi. Kesimpulannya, untuk menurunkan tingkat *dropout*, diperlukan pendekatan yang menyeluruh dan berkelanjutan yang mencakup dukungan **akademik**, **emosional**, dan **finansial** bagi mahasiswa selama masa studi mereka.
 
+## Menjalankan Prototype Machine Learning w/ Streamlit
+
+Prototype sistem *machine learning* ini dirancang untuk memprediksi apakah seorang mahasiswa di Jaya Jaya Institut berpotensi mengalami *dropout* atau tidak, berdasarkan data individual mahasiswa yang dimasukkan oleh pengguna.
+
+### Step-By-Step:
+
+1. Anda dapat mengakses prototype melalui tautan berikut: [here](https://ririe-submission-bpds2.streamlit.app)
+
+2. **Isi semua kolom input** yang tersedia di antarmuka aplikasi. Data yang diminta dikelompokkan dalam beberapa bagian sebagai berikut:
+
+   * **Informasi Umum Mahasiswa (Bagian Atas):**
+     - `Application Mode`: Tentukan jenis jalur pendaftaran mahasiswa.
+     - `Course`: Pilih program studi yang sedang diambil.
+     - `Gender`: Tentukan jenis kelamin mahasiswa.
+     - `Previous Qualification`: Pilih jenjang pendidikan terakhir sebelum masuk perguruan tinggi.
+     - `Age at Enrollment`: Atur usia mahasiswa saat pertama kali terdaftar menggunakan *slider*.
+
+   * **Kinerja Akademik Semester 2 (Bagian Kanan Atas):**
+     - `2nd Sem Units Approved`: Jumlah unit kurikuler yang berhasil diselesaikan di semester kedua.
+     - `2nd Sem Grade`: Rata-rata nilai yang diperoleh mahasiswa pada semester kedua.
+
+   * **Kinerja Akademik Semester 1 (Bagian Kanan Tengah):**
+     - `1st Sem Units Approved`: Jumlah unit kurikuler yang diselesaikan pada semester pertama.
+     - `1st Sem Grade`: Rata-rata nilai akademik pada semester pertama.
+
+   * **Kondisi Finansial Mahasiswa (Bagian Bawah):**
+     - `Tuition Fees Up to Date?`: Masukkan 1 jika pembayaran biaya kuliah sudah lunas, 0 jika belum.
+     - `Scholarship Holder?`: Masukkan 1 jika mahasiswa merupakan penerima beasiswa, 0 jika bukan.
+     - `Debtor?`: Masukkan 1 jika mahasiswa memiliki utang biaya kuliah, 0 jika tidak.
+
+3. **Tekan tombol “Prediksi”** untuk melihat hasil.
+
+Sistem akan segera memproses data yang dimasukkan menggunakan model *machine learning* yang sudah dilatih. Hasil prediksi akan ditampilkan di bagian bawah halaman beserta probability.
+
+### Teknis Singkat Prototype:
+
+- Aplikasi ini dikembangkan menggunakan *framework* Streamlit, yang memudahkan integrasi antara model *machine learning* berbasis Python dengan antarmuka pengguna yang interaktif.
+- Model prediktif yang digunakan telah dilatih menggunakan data historis mahasiswa untuk mendeteksi pola-pola yang berkaitan dengan *dropout*.
+- Data input yang diisi oleh pengguna akan dikonversi (di-*encode*) menjadi format numerik dan kategorikal agar kompatibel dengan model.
+- Model kemudian memproses data dan menampilkan prediksi status mahasiswa secara langsung melalui antarmuka Streamlit.
+
 ## Conclusion
 
 
