@@ -2,17 +2,19 @@
 
 ## Business Understanding
 
-Jaya Jaya Institut telah berdiri sejak tahun 2000, dikenal sebagai lembaga pendidikan dengan lulusan yang berkualitas. 
-Namun, belakangan ini institusi menghadapi permasalahan serius terkait meningkatnya angka **dropout** mahasiswa. Tingginya jumlah mahasiswa yang tidak menyelesaikan studi berdampak negatif terhadap citra institusi serta mengganggu efektivitas operasionalnya.
+Jaya Jaya Institut telah berdiri sejak tahun 2000, dikenal sebagai lembaga pendidikan dengan lulusan yang berkualitas. Namun, belakangan ini institusi menghadapi permasalahan serius terkait meningkatnya angka **dropout** mahasiswa. Tingginya jumlah mahasiswa yang tidak menyelesaikan studi berdampak negatif terhadap citra institusi serta mengganggu efektivitas operasionalnya.
 
 ### Permasalahan Bisnis
 
-Divisi Sumber Daya Manusia PT Jaya Jaya Maju saat ini menghadapi beberapa kendala signifikan dalam mengelola tingkat pengunduran diri karyawan, meliputi:
-- Kesulitan mengidentifikasi akar masalah pengunduran diri: Departemen HR belum memiliki pemahaman yang jelas mengenai faktor-faktor kunci yang mendorong karyawan memutuskan untuk meninggalkan perusahaan.
-- Kurangnya wawasan tentang tren pengunduran diri: Belum tersedianya analisis data yang menunjukkan pola atau karakteristik umum dari karyawan yang cenderung mengundurkan diri.
-- Sistem pemantauan yang belum efektif: Ketidakmampuan dalam melakukan pengawasan secara aktif dan tepat waktu terhadap indikator-indikator risiko pengunduran diri karyawan.
-- Pengambilan keputusan yang belum berbasis data: Kebijakan dan strategi HR masih banyak yang belum didukung oleh analisis data yang mendalam dan menyeluruh.
-- Ketiadaan mekanisme prediksi: Belum adanya model yang dapat memprediksi karyawan dengan risiko tinggi untuk mengundurkan diri, sehingga upaya pencegahan dini tidak dapat dilaksanakan dengan optimal.
+Tingginya tingkat dropout di Jaya Jaya Institut menunjukkan adanya sejumlah isu mendasar yang perlu segera diatasi:
+
+* **Faktor Demografis:** Usia saat masuk dan latar belakang pendidikan sebelumnya turut berpengaruh terhadap kelulusan mahasiswa.
+* **Kesulitan Akademik:** Sebagian mahasiswa mengalami hambatan dalam mengikuti kegiatan perkuliahan, yang terlihat dari rendahnya nilai dan banyaknya mata kuliah yang tidak lulus.
+* **Permasalahan Finansial:** Kesulitan dalam membayar biaya pendidikan tepat waktu dapat menjadi salah satu penyebab utama terjadinya dropout.
+* ** **Tidak Tersedianya Sistem Pemantauan Dini:** Belum terdapat sistem yang secara aktif memantau dan mengidentifikasi mahasiswa dengan potensi tinggi untuk mengalami dropout.
+* **Kurangnya Ketertarikan atau Ketidaksesuaian Jurusan:** Mahasiswa mungkin kehilangan semangat belajar atau merasa tidak cocok dengan program studi yang dipilih.
+
+Situasi ini membutuhkan solusi yang berbasis data agar institusi dapat melakukan intervensi yang lebih cepat, tepat sasaran, dan memberikan dampak nyata.
 
 ### Tujuan Proyek
 
