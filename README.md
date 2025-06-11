@@ -106,7 +106,7 @@ Setup environment:
 
 Dashboard ini dibuat menggunakan Metabase dan berperan sebagai media visualisasi interaktif untuk memantau kinerja mahasiswa serta mengidentifikasi faktor-faktor yang mempengaruhi tingkat *dropout*. Menyajikan informasi menyeluruh terkait kondisi mahasiswa dan indikator-indikator penting yang relevan.
 
-**Komponen Utama Dashboard:**
+### Komponen Utama Dashboard:
 
 1.  **Statistik Umum Mahasiswa:**
     * **Total Mahasiswa:** Sebanyak 4.424 mahasiswa tercatat dalam sistem.
@@ -139,7 +139,7 @@ Dashboard ini dibuat menggunakan Metabase dan berperan sebagai media visualisasi
 
     * Total keseluruhan mahasiswa ditampilkan pada bagian tengah diagram sebagai indikator utama.
 
-### Insight Dashboard
+### Insight Dashboard:
 Dashboard ini secara komprehensif mengungkap bahwa **faktor akademik** memiliki pengaruh dominan terhadap potensi mahasiswa mengalami *dropout* di Jaya Jaya Institut. Secara spesifik, jumlah unit kurikuler yang disetujui dan nilai akademik pada semester pertama dan kedua muncul sebagai indikator paling signifikan. Hal ini mencerminkan bahwa performa awal mahasiswa di masa-masa awal perkuliahan sangat menentukan keberlanjutan studi mereka. Mahasiswa dengan pencapaian rendah di semester awal cenderung memiliki risiko lebih tinggi untuk tidak menyelesaikan pendidikannya. Selain performa akademik, `Age_at_enrollment` juga menjadi faktor penting. Data menunjukkan bahwa mahasiswa yang berusia lebih muda saat masuk perguruan tinggi memiliki kemungkinan lebih besar untuk *dropout*. Hal ini dapat disebabkan oleh kurangnya kematangan emosional, kesulitan beradaptasi dengan lingkungan perguruan tinggi, atau beban akademik yang tidak sesuai dengan ekspektasi. Faktor-faktor non-akademik seperti status keuangan mahasiswa — apakah mereka menerima beasiswa (`Scholarship_holder`) atau memiliki tanggungan hutang (`Debtor`) — serta keteraturan dalam pembayaran biaya kuliah (`Tuition_fees_up_to_date`) turut memberikan kontribusi terhadap risiko *dropout*. Meskipun demikian, dampak dari faktor-faktor ini cenderung lebih kecil jika dibandingkan dengan pengaruh performa akademik. Artinya, masalah akademik lebih sering menjadi alasan utama dibandingkan tekanan finansial. Distribusi *dropout* berdasarkan gender menunjukkan perbedaan yang tidak signifikan, menandakan bahwa risiko ini terjadi secara relatif merata antara mahasiswa laki-laki dan perempuan. Upaya seperti pemantauan rutin terhadap nilai dan penyelesaian unit, pemberian bimbingan akademik secara berkala, serta program pendampingan bagi mahasiswa baru dapat menjadi solusi preventif yang efektif. Di samping itu, perhatian terhadap kondisi keuangan mahasiswa — seperti pemberian bantuan atau keringanan biaya — tetap menjadi aspek penting untuk mengurangi hambatan dalam menyelesaikan studi. Kesimpulannya, untuk menurunkan tingkat *dropout*, diperlukan pendekatan yang menyeluruh dan berkelanjutan yang mencakup dukungan **akademik**, **emosional**, dan **finansial** bagi mahasiswa selama masa studi mereka.
 
 ## Conclusion
