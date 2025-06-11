@@ -1,0 +1,59 @@
+Feature,Importance
+Curricular_units_2nd_sem_approved,0.21149353388065267
+Curricular_units_2nd_sem_grade,0.15477964957238508
+Curricular_units_1st_sem_approved,0.13183707294738525
+Curricular_units_1st_sem_grade,0.11251477970250537
+Age_at_enrollment,0.08227142556049079
+Tuition_fees_up_to_date,0.04888779119063113
+Scholarship_holder,0.0252652085642168
+Debtor,0.025207375568895216
+Gender_Male,0.02316754493498106
+Course_Animation and Multimedia Design,0.013994872819765162
+Application_mode_2nd Phase - General Contingent,0.013934713280803366
+Application_mode_Over 23 Years Old,0.012039367734153088
+Course_Basic Education,0.009910694380744075
+Course_Management,0.00880112476548419
+Course_Nursing,0.008123061171113664
+Course_Social Service,0.008086627252458938
+Application_mode_Change of Course,0.007940976984509362
+Course_Veterinary Nursing,0.0077643536573707
+Previous_qualification_Secondary Education - 12th Year of Schooling or Eq.,0.007248767080180529
+Course_Journalism and Communication,0.00705034343466098
+Course_Informatics Engineering,0.006911539163546543
+Course_Tourism,0.006123847703593365
+Course_Equinculture,0.0054645421806179435
+Course_Management (Evening Attendance),0.005200911427196825
+Course_Social Service (Evening Attendance),0.004972279061352406
+Course_Communication Design,0.0046852517331168846
+Application_mode_Transfer,0.004113961657758586
+Application_mode_3rd Phase - General Contingent,0.0039314908964231034
+Course_Agronomy,0.003834525487343494
+Application_mode_Change of Institution/Course,0.0037253913758669792
+Previous_qualification_Basic Education 3rd Cycle (9th/10th/11th Year) or Equiv.,0.0029836544128330382
+Application_mode_Holders of Other Higher Courses,0.0029358052677910425
+Previous_qualification_Higher Education - Degree,0.002764780993286455
+Application_mode_Technological Specialization Diploma Holders,0.002753810902497064
+Course_Oral Hygiene,0.002622508221601281
+Previous_qualification_Technological Specialization Course,0.002609826710289622
+Application_mode_1st Phase - Special Contingent (Madeira Island),0.001887912610506996
+Application_mode_International Student (Bachelor),0.001774217465045093
+Previous_qualification_Higher Education - Master's,0.0014765736050386205
+Previous_qualification_Higher Education - Degree (1st Cycle),0.0012626447649564875
+Application_mode_1st Phase - Special Contingent (Azores Island),0.0012009726575946044
+Application_mode_Short Cycle Diploma Holders,0.0011649208293287071
+Previous_qualification_Higher Education - Bachelor's Degree,0.0011078800074281769
+Previous_qualification_Professional Higher Technical Course,0.000967936641002246
+Previous_qualification_Other - 11th Year of Schooling,0.0009152336453623316
+Previous_qualification_Frequency of Higher Education,0.000717048230413619
+"Application_mode_Ordinance No. 533-A/99, Item B3 (Other Institution)",0.0003559097149030272
+Course_Biofuel Production Technologies,0.0003556285628376765
+Previous_qualification_Higher Education - Master (2nd Cycle),0.00018869119368066366
+Application_mode_Ordinance No. 854-B/99,0.00016228570073485458
+Application_mode_Ordinance No. 612/93,0.00014239871099846677
+"Application_mode_Ordinance No. 533-A/99, Item B2 (Different Plan)",9.797142991258662e-05
+Previous_qualification_10th Year of Schooling - Not Completed,9.265417858920645e-05
+Previous_qualification_12th Year of Schooling - Not Completed,9.103056326035695e-05
+Previous_qualification_Basic Education 2nd Cycle (6th/7th/8th Year) or Equiv.,5.5324301003598194e-05
+Previous_qualification_11th Year of Schooling - Not Completed,2.5116742485860556e-05
+Application_mode_Change of Institution/Course (International),2.653457023840786e-06
+Previous_qualification_Higher Education - Doctorate,1.583309390929429e-06
