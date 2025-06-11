@@ -104,38 +104,48 @@ Setup environment:
 ![Dashboard 2](<ririee-dashboard3.png>)
 ![Dashboard 2](<ririee-dashboard4.png>)
 
-Dashboard ini dirancang untuk menampilkan visualisasi yang jelas dan informatif tentang berbagai aspek yang berkontribusi terhadap pengunduran diri karyawan di perusahaan Jaya Jaya Maju, sekaligus menyajikan prediksi mengenai karyawan yang berpotensi meninggalkan perusahaan.
+Dashboard ini dibuat menggunakan Metabase dan berperan sebagai media visualisasi interaktif untuk memantau kinerja mahasiswa serta mengidentifikasi faktor-faktor yang mempengaruhi tingkat *dropout*. Menyajikan informasi menyeluruh terkait kondisi mahasiswa dan indikator-indikator penting yang relevan.
 
 **Komponen Utama Dashboard:**
 
-1.  **Metriks Awal:**
-    * **1,058 Total Karyawan:** Menunjukkan jumlah total karyawan saat ini dalam perusahaan, baik yang masih aktif bekerja maupun yang sudah resign.
-    * **879 Total Karyawan yang Masih Bekerja:** Jumlah karyawan yang aktif bekerja.
-    * **179 Total Karyawan yang Keluar:** Jumlah karyawan yang resign.
-    * **Distribusi Employee berdasarkan Attrition:** Memvisualisasikan proporsi karyawan yang masih bekerja dan yang resign dari keseluruhan karyawan.
-    * **252 Total Karyawan yang Berpotensi Keluar (>0.5):** Jumlah karyawan dengan potensi untuk keluar.
-    * **22 Total Karyawan yang Berpotensi Tinggi Keluar (>0.6):** Jumlah karyawan yang memiliki chance/kemungkinan tinggi untuk keluar. Ini adalah kelompok yang perlu mendapatkan perhatian lebih.
+**Komponen Utama Dashboard:**
 
-2.  **Faktor-Faktor Penyebab Karyawan Keluar:**
-    * Menampilkan 10 fitur atau faktor teratas yang paling berpengaruh terhadap keputusan karyawan untuk keluar. Berdasarkan visualisasi ini, **MonthlyIncome** (Gaji Bulanan) menjadi faktor yang paling signifikan, diikuti oleh **Age** (Usia) dan **TotalWorkingYears** (Total Tahun Bekerja).
+1.  **Statistik Umum Mahasiswa:**
+    * **Total Mahasiswa:** Sebanyak 4.424 mahasiswa tercatat dalam sistem.
+    * **Mahasiswa Terdaftar (Aktif):** 794 mahasiswa sedang aktif menempuh studi.
+    * **Mahasiswa Lulus:** 2.209 mahasiswa telah menyelesaikan seluruh kewajiban akademik.
+    * **Mahasiswa Keluar:** 1.421 mahasiswa tercatat keluar dari perguruan tinggi, baik karena mengundurkan diri maupun sebab lainnya.
+    * **Mahasiswa Berpotensi Dropout (>0.5):** 125 mahasiswa terdeteksi memiliki potensi tinggi untuk keluar.
+    * **Mahasiswa dengan Risiko Dropout Sangat Tinggi (>0.6):** Sebanyak 48 mahasiswa berada pada tingkat risiko paling tinggi dan memerlukan perhatian lebih.
 
-3.  **Penyajian Data Berbagai Faktor:**
-    * **Distribusi Monthly Income berdasarkan Attrition:** Distribusi gaji bulanan karyawan yang masih bekerja dan resign. Terlihat bahwa karyawan dengan rentang gaji yang rendah cenderung memilih resign dari perusahaan.
-    * **Distribusi Age berdasarkan Attrition:** Distribusi usia karyawan yang masih bekerja dan resign. Faktor-U dapat menjadi insight bagi perusahaan.
-    * **Distribusi TotalWorkingYears berdasarkan Attrition:** Distribusi pengabdian karyawan (dalam tahun) yang masih bekerja dan resign. Terlihat kecenderungan karyawan pada masa awal bekerja memiliki tingkat attrition yang lebih tinggi.
-    * **Distribusi YearsAtCompany berdasarkan Attrition:** Distribusi lama bekerja karyawan (dalam tahun) yang masih bekerja dan resign. Terlihat kecenderungan karyawan pada masa awal bekerja memiliki tingkat attrition yang lebih tinggi.
-    * **Distribusi OverTime berdasarkan Attrition:** Distribusi jumlah karyawan yang masih bekerja dan resign berdasarkan kebiasaan/tradisi perusahaan (lembur). Terlihat bahwa karyawan yang sering kena shift lembur cenderung memilih resign dibandingkan dengan yang tidak.
-    * **Distribusi Gender berdasarkan Attrition:** Distribusi jumlah karyawan yang masih bekerja dan resign berdasarkan jenis kelamin. Terlihat bahwa proporsi pria lebih banyak daripada wanita.
+2.  **Faktor-Faktor Utama Penyebab Mahasiswa Dropout:**
+    * Menampilkan 10 fitur teratas yang paling berkontribusi terhadap kemungkinan mahasiswa keluar, berdasarkan hasil pemodelan analitik. Faktor paling berpengaruh di antaranya:
+        1. `Curricular_units_2nd_sem_approved`
+        2. `Curricular_units_2nd_sem_grade`
+        3. `Curricular_units_1st_sem_approved`
+        4. `Curricular_units_1st_sem_grade`
+        5. `Age_at_enrollment`
+        6. `Tuition_fees_up_to_date`
+        7. `Scholarship_holder`
+        8. `Debtor`
+        9. `Gender_Male`
+        10. `Course_Animation and Multimedia Design`
+    
+    * Faktor-faktor ini menjadi perhatian utama dalam upaya mitigasi risiko dropout.
+
+3.  **Distribusi Mahasiswa Berdasarkan Status:**
+    * Visualisasi menampilkan proporsi mahasiswa berdasarkan status mereka:
+        * **Graduate (Lulus):** 2.209 mahasiswa (50%)
+        * **Enrolled (Masih Terdaftar):** 794 mahasiswa (18%)
+        * **Dropout (Keluar):** 1.421 mahasiswa (32%)
+
+    * Total keseluruhan mahasiswa ditampilkan pada bagian tengah diagram sebagai indikator utama.
+
+Dashboard ini secara komprehensif mengungkap bahwa **faktor akademik** memiliki pengaruh dominan terhadap potensi mahasiswa mengalami *dropout* di Jaya Jaya Institut. Secara spesifik, jumlah unit kurikuler yang disetujui dan nilai akademik pada semester pertama dan kedua muncul sebagai indikator paling signifikan. Hal ini mencerminkan bahwa performa awal mahasiswa di masa-masa awal perkuliahan sangat menentukan keberlanjutan studi mereka. Mahasiswa dengan pencapaian rendah di semester awal cenderung memiliki risiko lebih tinggi untuk tidak menyelesaikan pendidikannya. Selain performa akademik, `Age_at_enrollment` juga menjadi faktor penting. Data menunjukkan bahwa mahasiswa yang berusia lebih muda saat masuk perguruan tinggi memiliki kemungkinan lebih besar untuk *dropout*. Hal ini dapat disebabkan oleh kurangnya kematangan emosional, kesulitan beradaptasi dengan lingkungan perguruan tinggi, atau beban akademik yang tidak sesuai dengan ekspektasi. Faktor-faktor non-akademik seperti status keuangan mahasiswa — apakah mereka menerima beasiswa (`Scholarship_holder`) atau memiliki tanggungan hutang (`Debtor`) — serta keteraturan dalam pembayaran biaya kuliah (`Tuition_fees_up_to_date`) turut memberikan kontribusi terhadap risiko *dropout*. Meskipun demikian, dampak dari faktor-faktor ini cenderung lebih kecil jika dibandingkan dengan pengaruh performa akademik. Artinya, masalah akademik lebih sering menjadi alasan utama dibandingkan tekanan finansial. Distribusi *dropout* berdasarkan gender menunjukkan perbedaan yang tidak signifikan, menandakan bahwa risiko ini terjadi secara relatif merata antara mahasiswa laki-laki dan perempuan. Upaya seperti pemantauan rutin terhadap nilai dan penyelesaian unit, pemberian bimbingan akademik secara berkala, serta program pendampingan bagi mahasiswa baru dapat menjadi solusi preventif yang efektif. Di samping itu, perhatian terhadap kondisi keuangan mahasiswa — seperti pemberian bantuan atau keringanan biaya — tetap menjadi aspek penting untuk mengurangi hambatan dalam menyelesaikan studi. Kesimpulannya, untuk menurunkan tingkat *dropout*, diperlukan pendekatan yang menyeluruh dan berkelanjutan yang mencakup dukungan **akademik**, **emosional**, dan **finansial** bagi mahasiswa selama masa studi mereka.
 
 ## Conclusion
 
-Proyek ini difokuskan untuk mengenali penyebab utama tingginya angka attrition karyawan di Jaya Jaya Maju dan menyediakan dashboard interaktif sebagai alat bantu visualisasi serta prediksi karyawan yang berisiko keluar.
 
-Dari hasil analisis data dan model Random Forest hasil feature importance, gaji bulanan (MonthlyIncome) menjadi faktor prediktif terkuat terhadap attrition, diikuti oleh usia (Age), total tahun Bekerja (TotalWorkingYears), lama bekerja di perusahaan (YearsAtCompany) dan lingkungan kerja (EnvironmentSatisfaction). Fakrtor tersebut menunjukkan pengaruh yang cukup besar terhadap kecenderungan seorang karyawan meninggalkan perusahaan.
-
-Model prediksi menunjukkan kinerja yang sangat baik dengan akurasi 95,23% serta metrik evaluasi lainnya seperti precision, recall, dan f1-score yang tinggi, menandakan bahwa model mampu membedakan dengan akurat antara karyawan yang bertahan dan yang keluar. Hasil classification report juga menunjukkan nilai precision, recall, dan f1-score yang tinggi untuk kedua kelas meenandakan model mampu mengklasifikasikan karyawan dengan baik.
-
-*Dashboard* yang dikembangkan menampilkan data secara visual, memudahkan HR dalam melihat tren dan pola *attrition* berdasarkan berbagai aspek, serta mengidentifikasi karyawan dengan risiko tinggi secara real-time. Dashboard ini diharapkan dapat membantu departemen HR dalam memantau tren attrition, memahami faktor pendorongnya, dan mengambil langkah proaktif untuk mengurangi tingkat attrition.
 
 ### Rekomendasi Action Items (Optional)
 
