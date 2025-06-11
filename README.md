@@ -18,36 +18,39 @@ Situasi ini membutuhkan solusi yang berbasis data agar institusi dapat melakukan
 
 ### Tujuan Proyek
 
-Untuk menjawab permasalahan bisnis tersebut, proyek ini bertujuan untuk:
-- Menemukan faktor-faktor utama penyebab pengunduran diri: Melaksanakan analisis komprehensif terhadap informasi karyawan untuk mengungkap variabel-variabel yang memiliki korelasi kuat dengan tingkat pengunduran diri.
-- Mengembangkan sistem prediksi berbasis machine learning: Merancang model klasifikasi dengan teknologi machine learning yang dapat mengestimasi probabilitas pengunduran diri setiap karyawan.
-- Menciptakan dashboard pemantauan data : Menghadirkan visualisasi data yang informatif bagi departemen HR untuk memantau tren pengunduran diri secara langsung dengan pendekatan berbasis data.
-- Menyediakan analisis mendalam dan saran praktis: Mempresentasikan temuan-temuan kunci dari hasil analisis dan prediksi untuk mendukung pengembangan strategi mempertahankan karyawan yang lebih efektif.
+Proyek ini dirancang untuk membantu Jaya Jaya Institut dalam mengurangi tingkat dropout mahasiswa melalui langkah-langkah berikut:
+
+* **Mengungkap faktor-faktor kunci** yang berperan dalam meningkatkan risiko mahasiswa mengalami dropout.
+* **Mengembangkan model prediksi berbasis *machine learning*** yang mampu mengenali potensi dropout sejak dini.
+* **Menyediakan *dashboard* interaktif untuk keperluan manajerial**, guna memantau perkembangan mahasiswa dan mendukung perencanaan strategi intervensi secara proaktif.
 
 ### Cakupan Proyek
 
 Proyek ini akan mencakup tahapan-tahapan berikut:
 
 1. **Data Understanding**   
-   Mengumpulkan dan mempelajari data karyawan yang relevan untuk memahami struktur, sumber, dan potensi permasalahan kualitas data. Tahap ini bertujuan membangun pemahaman komprehensif mengenai konteks data yang akan dianalisis.
+   Mengumpulkan informasi mahasiswa yang relevan serta memahami struktur, asal-usul, dan potensi isu kualitas data. Tahapan ini penting untuk memperoleh wawasan menyeluruh terhadap konteks data yang akan dianalisis.
 
-2. **Data Preparation**   
-   Membersihkan data dari nilai hilang (*missing values*), pencilan (*outliers*), dan inkonsistensi.
+3. **Data Preparation**   
+   Melakukan pembersihan data dari nilai yang hilang (*missing values*), data yang menyimpang (*outliers*), serta ketidakkonsistenan. Data juga diproses lebih lanjut, seperti *encoding* variabel kategorikal dan normalisasi, agar siap untuk dianalisis dan dimodelkan.
 
-3. **Exploratory Data Analysis (EDA)**   
-   Menjalankan analisis statistik deskriptif dan membuat visualisasi untuk mengidentifikasi pola, kecenderungan, dan korelasi antar variabel. Fokus utama tahap ini adalah menemukan faktor-faktor yang berpotensi mempengaruhi *attrition*.
+5. **Exploratory Data Analysis (EDA)**   
+   Melakukan analisis deskriptif dan visual untuk menemukan pola, tren, serta keterkaitan antar variabel. Tahap ini bertujuan untuk mengidentifikasi variabel-variabel penting yang dapat memengaruhi dropout.
 
-4. **Modelling**   
-   Memisahkan dataset menjadi data untuk pelatihan dan pengujian. Menyeleksi algoritma yang tepat, melatih model dengan data pelatihan, dan melakukan optimasi parameter bila diperlukan untuk meningkatkan kinerja model.
+7. **Modelling**   
+   Memisahkan data menjadi bagian pelatihan dan pengujian, memilih algoritma yang tepat, melatih model dengan data pelatihan, serta melakukan penyetelan parameter (*hyperparameter tuning*) guna meningkatkan akurasi model.
 
-5. **Evaluasi**   
-   Menganalisis performa model menggunakan data pengujian dengan berbagai metrik evaluasi seperti akurasi, precision, recall, dan F1-score, untuk menentukan model terbaik dalam memprediksi risiko *attrition*.
+9. **Evaluasi Model**   
+    Menilai performa model dengan menggunakan data pengujian serta metrik evaluasi seperti akurasi, presisi, *recall*, dan F1-score untuk memilih model terbaik dalam memprediksi risiko dropout.
 
-6. **Pengembangan Dashboard**   
-   Merancang dan mengembangkan panel pemantauan interaktif yang memudahkan tim HR untuk mengawasi indikator penting terkait pengunduran diri, mengeksplorasi faktor risiko utama, dan melihat hasil prediksi model secara langsung.
+11. **Pembuatan Streamlit**   
+    Merancang antarmuka sederhana berbasis Streamlit yang memungkinkan pengguna berinteraksi langsung dengan model, memasukkan data mahasiswa, dan memperoleh hasil prediksi secara *real-time*.
 
-7. **Dokumentasi Laporan dan Rekomendasi**   
-   Mendokumentasikan seluruh tahapan proyek, dari analisis hingga implementasi. Menyajikan temuan utama dan memberikan saran berbasis data yang dapat diterapkan oleh manajemen untuk mengurangi tingkat *attrition*.
+13. **Pengembangan Dashboard**   
+    Membangun *dashboard* interaktif bagi manajemen akademik untuk memantau metrik dropout, mengevaluasi faktor risiko utama, serta meninjau prediksi model secara langsung.
+
+15. **Dokumentasi dan Rekomendasi**   
+    Menyusun laporan menyeluruh dari seluruh tahapan proyek, menyajikan temuan-temuan utama, serta memberikan saran berbasis data yang dapat diimplementasikan untuk menekan angka dropout.
 
 ### Persiapan
 
